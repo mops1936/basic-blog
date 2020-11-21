@@ -49,33 +49,33 @@ ActiveForm::end();
 ?>
 
 <?php
-$js = <<<JS
-var input_id = '#tag_input';
-var btn_id = '#tag_button';
-var count = 1;
-
- $(btn_id).on('click', function(){
- 
- var input = document.getElementById(input_id).cloneNode(true);
- var button = document.getElementById(btn_id).cloneNode(true);
-
- document.getElementById(btn_id).remove();
-
- input_id = input_id + count;
- btn_id = btn_id + count
-
- input.setAttribute('id', input_id);
- button.setAttribute('id', btn_id);
-
- document.getElementById('tags').appendChild(input);
- document.getElementById('tags').appendChild(button);
- count++;
-
- return false;
- 
- });
-JS;
-
-$this->registerJs($js);
-?>
+//$js = <<<JS
+//var input_id = '#tag_input';
+//var btn_id = '#tag_button';
+//var count = 1;
+//
+// $(btn_id).on('click', function(){
+//
+// var input = document.getElementById(input_id).cloneNode(true);
+// var button = document.getElementById(btn_id).cloneNode(true);
+//
+// document.getElementById(btn_id).remove();
+//
+// input_id = input_id + count;
+// btn_id = btn_id + count
+//
+// input.setAttribute('id', input_id);
+// button.setAttribute('id', btn_id);
+//
+// document.getElementById('tags').appendChild(input);
+// document.getElementById('tags').appendChild(button);
+// count++;
+//
+// return false;
+//
+// });
+//JS;
+//
+//$this->registerJs($js);
+//?>
 
