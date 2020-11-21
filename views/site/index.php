@@ -91,7 +91,8 @@ var offset = 0;
                             tr.append(td4);
                             
                             var td5 = document.createElement('td');     // создание элемента строки таблицы (дата статьи)
-                            td5.innerHTML = item.publicDate;
+                            var date = item.publicDate.slice(8) + '.' + item.publicDate.slice(5,7) + '.' + item.publicDate.slice(0,4); // вывод даты в формате дд.мм.гггг
+                            td5.innerHTML = date;
                             tr.append(td5);
                         })
                         if(data.length < 5){        // если из БД пришло менее 5 записей, то записей больше нет
