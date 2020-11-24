@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 21 2020 г., 11:48
+-- Время создания: Ноя 25 2020 г., 00:26
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.5
 
@@ -59,7 +59,23 @@ INSERT INTO `articles` (`id`, `title`, `content`, `date`, `user_id`, `context_id
 (16, '<p>Наименование-1</p>\r\n', '<p><span style=\"background-color:#40E0D0\">Техника</span></p>\r\n\r\n<p><strong>Техника</strong></p>\r\n\r\n<p><em>Техника</em></p>\r\n\r\n<p><u>Техника</u></p>\r\n\r\n<p><s>Техника</s></p>\r\n\r\n<p><span style=\"color:#DAA520\">Техника</span></p>\r\n', '2020-11-19', 10, 2),
 (17, '<p>Название 3478</p>\r\n', '<p><s><u><em><strong>Бизнес</strong></em></u></s></p>\r\n', '2020-11-19', 10, 2),
 (18, '<p>Статья №213</p>\r\n', '<p>Текст на первой строке.</p>\r\n\r\n<p>Текст на второй строке.</p>\r\n\r\n<p>И даже на третьей.</p>\r\n', '2020-11-19', 10, 5),
-(19, '<p>фапрпыварвыар</p>\r\n', '<p>325аврварвр</p>\r\n', '2020-11-19', 10, 6);
+(19, '<p>фапрпыварвыар</p>\r\n', '<p>325аврварвр</p>\r\n', '2020-11-19', 10, 6),
+(20, '<p>Новая статейка</p>\r\n', '<p>Самое интересное и неповторимое содержание.</p>\r\n\r\n<p>Самое интересное и неповторимое содержание.</p>\r\n\r\n<p>Самое интересное и неповторимое содержание.</p>\r\n\r\n<p><strong>Самое интересное и неповторимое содержание.</strong></p>\r\n\r\n<p><strong>Самое интересное и неповторимое содержание.</strong></p>\r\n\r\n<p><strong>Самое интересное и неповторимое содержание.</strong></p>\r\n', '2020-11-21', 8, 5),
+(21, 'Новый заголовок №32', '<p>Статья, Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;Статья,&nbsp;</p>\r\n', '2020-11-24', 35, 5),
+(22, 'Новый заголовок №33', '<p>qwertyuiop</p>\r\n', '2020-11-24', 35, 5),
+(23, 'Новый заголовок №34', '<p>awrasgdsg</p>\r\n', '2020-11-24', 35, 2),
+(24, 'Новый заголовок №35', '<p>фывпафцуцйцу</p>\r\n', '2020-11-24', 35, 5),
+(25, 'Новый заголовок №36', '<p>ыапвыпывпывп</p>\r\n', '2020-11-24', 35, 2),
+(26, 'Новый заголовок №37', '<p>awdzxd</p>\r\n', '2020-11-24', 35, 2),
+(27, 'Новый заголовок №38', '<p>qweasdasdasd</p>\r\n', '2020-11-24', 35, 2),
+(28, 'Новый заголовок №39', '<p>awddgdfghhfgh</p>\r\n', '2020-11-24', 35, 2),
+(29, 'Новый заголовок №40', '<p>qwertyuuiop[admoiwej29-83jkom3v203m</p>\r\n', '2020-11-24', 35, 1),
+(30, 'Новый заголовок №41', '<p>йцуывапрорлд</p>\r\n', '2020-11-24', 35, 5),
+(31, 'Новый заголовок №42', '<p>xcvbnmjk,l;lkjhgfd</p>\r\n', '2020-11-24', 35, 2),
+(32, 'Новый заголовок №43', '<p>фывапрт</p>\r\n', '2020-11-24', 35, 1),
+(33, 'Новый заголовок №44', '<p>asdfgbnm</p>\r\n', '2020-11-24', 35, 5),
+(34, 'Новый заголовок №45', '<p>wrvhghrtrhthrthrthrthr34534</p>\r\n', '2020-11-24', 35, 2),
+(35, 'Новый заголовок №48', '<p>Первый абзац 1.</p>\r\n\r\n<p><strong><u>Второй абзац 2.</u></strong></p>\r\n\r\n<p><span style=\"color:#FFFF00\"><span style=\"background-color:#FF8C00\">Третий абзац 3.</span></span></p>\r\n', '2020-11-24', 35, 1);
 
 -- --------------------------------------------------------
 
@@ -88,7 +104,30 @@ INSERT INTO `articles_tags` (`id`, `article_id`, `tag_id`) VALUES
 (8, 16, 2),
 (9, 17, 6),
 (10, 18, 1),
-(11, 19, 7);
+(11, 19, 7),
+(12, 20, 2),
+(13, 21, 2),
+(14, 22, 2),
+(15, 23, 2),
+(16, 24, 4),
+(17, 25, 3),
+(18, 26, 2),
+(22, 29, 1),
+(23, 29, 2),
+(24, 29, 4),
+(27, 30, 1),
+(28, 30, 2),
+(29, 30, 3),
+(32, 31, 1),
+(33, 31, 3),
+(34, 31, 4),
+(36, 33, 1),
+(37, 33, 2),
+(38, 33, 3),
+(39, 34, 2),
+(40, 34, 3),
+(41, 35, 7),
+(42, 35, 4);
 
 -- --------------------------------------------------------
 
@@ -160,7 +199,13 @@ INSERT INTO `users` (`id`, `username`, `password`, `status`) VALUES
 (10, 'login3', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
 (11, 'login4', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
 (12, 'login5', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
-(13, 'login6', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1);
+(13, 'login6', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
+(14, 'login7', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
+(15, 'login8', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
+(32, 'login123', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
+(33, 'login113', 'ff64fd3d77772eddd7f530516b47ce6dc9b4ab31', 1),
+(34, 'login21', 'd2f75e8204fedf2eacd261e2461b2964e3bfd5be', 1),
+(35, 'login122', 'd2f75e8204fedf2eacd261e2461b2964e3bfd5be', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -209,13 +254,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT для таблицы `articles_tags`
 --
 ALTER TABLE `articles_tags`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -227,13 +272,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
