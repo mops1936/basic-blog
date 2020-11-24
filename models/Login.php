@@ -40,6 +40,6 @@ class Login extends Model // модель для заполнения формы
     
     public function  getUser()
     {
-        return User::findOne(['username' => $this->username]); // поиск в БД Users пользователя с заданным username
+        return User::findOne(['username' => $this->username]); // поиск в таблице Users пользователя с заданным username
     }
 }

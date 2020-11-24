@@ -36,7 +36,7 @@ AppAsset::register($this);
         ['label' => 'Добавить статью', 'url' => ['/site/editor'],
             'visible' => (!(Yii::$app->user->isGuest) && (Yii::$app->controller->action->id)!='editor')],
         ['label' => 'Выход  [ ' . Yii::$app->user->identity->username .' ]', 'url' => ['/user/logout'],
-            'visible' => (!(Yii::$app->user->isGuest) && (Yii::$app->controller->action->id)!='editor')]
+            'visible' => (!(Yii::$app->user->isGuest))]
     ];
     echo Nav::widget([
         'items' => $items,
@@ -46,8 +46,7 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container" style="margin-top: 50px">
-        <!-- в $content содержимое view -->
+    <div class="container" id="content" style="margin-top: 30px">
         <?= $content ?>
     </div>
     <?php $this->endBody(); ?>

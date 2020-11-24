@@ -19,6 +19,18 @@ class Article extends ActiveRecord implements IdentityInterface
         return 'articles';
     }
     
+    public function attributeLabels() // синонимы для отображения полей
+    {
+        return [
+            'title' => 'Заголовок статьи',
+            'content' => 'Содержание статьи',
+            'context' => 'Контекст статьи',
+            'tagsStr' => 'Тэги',
+            'author' => 'Автор статьи',
+            'date' => 'Дата'
+        ];
+    }
+    
     public static function getAll($limit, $offset) // метод для получения $limit статей с $offset позиции из БД
     {
         return Article::find()->limit($limit)->offset($offset)->all();

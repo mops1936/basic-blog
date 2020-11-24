@@ -1,10 +1,25 @@
 <?php
+//use yii\widgets\DetailView;
+//
+//echo DetailView::widget([
+//    'model' => $article,
+//    'attributes' => [
+//        'title', 'context', 'tagsStr', 'content', 'author', 'date'
+//    ]
+//]);
 
-echo '<h1>Название: ' . $article->title . '</h1>';
-echo '<h2>Контекст: ' . $article->context . '</h2>';
-echo '<h3>Тэги: ' . $article->tagsStr . '</h3>';
-echo '<h4>Текст статьи: </h4>';
-echo $article->content;
-echo '<h4>Автор: ' . $article->author . '</h4>';
+echo '<h1 align="center">' . $article->title.'</h1>';
+echo '<br>';
+echo '<h4>Контекст: ' . $article->context . '</h4>';
+echo '<h4>Тэги: ' . $article->tagsStr . '</h4>';
+echo '<br>';
+echo '<h4>';
+echo '<p align="justify">' . $article->content . '</p>';
+echo '</h4>';
+echo '<br>';
+echo '<div align="right">';
+echo '<h4>Автор: ' . $article->author . '</4>';
 echo '<h4>Дата: ' . $article->date . '</h4>';
+echo '</div>';
 
+?>

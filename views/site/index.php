@@ -57,17 +57,16 @@ $js = <<<JS
 document.getElementsByClassName('summary')[0].remove(); // удаление строки "Showing ..." над таблицей
 var offset = 0;
 
- $('#my_button').on('click', function(){        // ф-ция-обработчик нажатия на кнопку "Загрузить следующие 5 статей"
+ $('#my_button').on('click', function(){     // обработчик нажатия на кнопку "Загрузить следующие 5 статей"
      offset += 5;
      $.ajax({
          url: '/../../controllers/SiteController?offset=' + offset, // в GET помещается смещение для чтения из БД
-          //'/site/index',
          type: 'GET',
          dataType: 'json',
          success: function(data){
-                    console.log(data);  // принятые данные пишутся в консоль (для отладки)
+                    //console.log(data);  // принятые данные пишутся в консоль (для отладки)
                     if(data != 'x'){    // 'x' - признак того, что все записи из БД считаны
-                        data.forEach(function (item, i, arr){       // цикл по записям из БД
+                        data.forEach(function (item){       // цикл по записям из БД
                             var tbody = document.getElementsByTagName('tbody').item(0); // поиск тела таблицы
                             
                             var tr = document.createElement('tr');      // создание новой строки таблицы
@@ -91,7 +90,8 @@ var offset = 0;
                             tr.append(td4);
                             
                             var td5 = document.createElement('td');     // создание элемента строки таблицы (дата статьи)
-                            var date = item.publicDate.slice(8) + '.' + item.publicDate.slice(5,7) + '.' + item.publicDate.slice(0,4); // вывод даты в формате дд.мм.гггг
+                            var date = item.publicDate.slice(8) + '.' + item.publicDate.slice(5,7) + '.'
+                            + item.publicDate.slice(0,4); // вывод даты в формате дд.мм.гггг (01.01.2020)
                             td5.innerHTML = date;
                             tr.append(td5);
                         })

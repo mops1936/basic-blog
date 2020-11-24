@@ -5,6 +5,7 @@ use Yii;
 use yii\web\Controller;
 use app\models\Signup;
 use app\models\Login;
+use app\models\User;
 
 class UserController extends Controller
 {
@@ -30,6 +31,7 @@ class UserController extends Controller
         if(!Yii::$app->user->isGuest)
         {
             Yii::$app->user->logout(); // выход текущего пользователя
+            
             return $this->goHome(); // возврат на домашнюю страницу
         }
     }
@@ -47,10 +49,12 @@ class UserController extends Controller
             $signupModel->attributes = Yii::$app->request->post('Signup'); // заполнение модели данными из POST
             if($signupModel->validate() && $signupModel->signup()) // если данные валидны и пользователь успешно осхранен в БД
             {
-                return $this->goHome(); // возврат на домашнюю страницу
+                Yii::$app->session->setFlash('success', 'Регистрация прошла успешно!'); // вывод сообщения об успешной регистрации
+                
+                Yii::$app->user->login(User::findOne(['username' => $signupModel->username])); // вход только что зарегестрированного пользователя
+                //return $this->goHome(); // возврат на домашнюю страницу
             }
         }
-        
         return $this->render("signup", ['model' => $signupModel]); // отображение представления user\signup.php
     }
 }

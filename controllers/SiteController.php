@@ -70,7 +70,8 @@ class SiteController extends Controller
             $editorModel->attributes = Yii::$app->request->post('Editor'); // заполнение модели данными из POST
             if($editorModel->validate() && $editorModel->save()) // если данные валидны и статья успешно сохранена в БД
             {
-                    return $this->goHome(); // возврат на домашнюю страницу
+                Yii::$app->session->setFlash('success', 'Статья успешно сохранена!'); // вывод сообщения о сохранении статьи
+                return $this->goHome(); // возврат на домашнюю страницу
             }
             else
             {
@@ -89,7 +90,9 @@ class SiteController extends Controller
             $article->getAuthor();
             $article->getContext();
             $article->convertTagsToString();
-            $article->fillPublicFields();
+            
+            $formatDate = explode('-', $article->date);
+            $article->date = $formatDate[2] . '.' . $formatDate[1] . '.' . $formatDate[0]; // формат даты дд.мм.гггг
             return $this->render('article', ['article'=>$article]); // отображение представления site\article.php
         }
     }
